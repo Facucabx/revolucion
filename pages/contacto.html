@@ -12,24 +12,43 @@
       content="SERVICIOS, SAN NICOLAS DE LOS ARROYOS, PROFESIONALES, ARGENTINA, PROYECTO, EXPERTOS, BUSCAR"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horarios de Apligood servicios</title>
+    <title>Contacto de Apligood servicios</title>
   </head>
   <body>
     <header>
-      <p>Apligood servicios</p>
+      <p>Contacto</p>
       <nav>
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="#">Servicios</a></li>
         <li>
-          <a href="#" target="_blank">Horarios de atención</a>
+          <a href="../pages/horarios.html" target="_blank"
+            >Horarios de atención</a
+          >
         </li>
-        <li><a href="./contacto.html">Contacto</a></li>
+        <li><a href="#">Contacto</a></li>
       </nav>
     </header>
     <main>
       <section>
-        <h1>HORARIOS</h1>
-        <h2>Lunes a Viernes de 10hs a 16hs.</h2>
+        <div>
+          <h1>Formulario de Contacto</h1>
+          <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required /><br />
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required /><br />
+
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required /><br />
+
+            <label for="mensaje">Mensaje:</label><br />
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea
+            ><br />
+
+            <input type="submit" value="Enviar" />
+          </form>
+        </div>
       </section>
     </main>
     <footer>
