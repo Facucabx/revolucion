@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap");
+* {
+  list-style: none;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+body header {
+  background-color: black;
+  width: 100%;
+}
+body header p {
+  color: orange;
+}
+body header nav {
+  display: flex;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 2rem;
+}
+body header nav a {
+  text-decoration: none;
+  margin: 1rem;
+  color: rgb(255, 81, 0);
+}
+body header nav .logo {
+  color: #cfcece;
+  font-size: 1.5rem;
+}
+body main section {
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+body main section #h1-index {
+  color: rgb(247, 26, 26);
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+body main section #h2-index,
+body main section #h3-index,
+body main section #h1-horarios,
+body main section #h2-horarios {
+  color: rgb(50, 163, 88);
+  text-align: center;
+  margin: 0.5rem;
+  font-family: "Ubuntu", sans-serif;
+}
+body main section input {
+  width: 600px;
+  font-size: 20px;
+  height: 40px;
+  background-color: rgba(160, 159, 159, 0.301);
+  padding-left: 15px;
+  color: rgb(191, 218, 209);
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #030303;
+  outline: none;
+}
+body main section input:focus {
+  border-color: #f15b04;
+  transition: 0.5s;
+}
+body main section #contenedor-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main section #contenedor-boton-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main section #contenedor-boton-index button {
+  width: 200px;
+  height: 30px;
+  font-size: 0.8rem;
+  margin: 1rem;
+  font-family: "Ubuntu", sans-serif;
+}
+body main section #contenedor-horarios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+body main section #contenedor-horarios table {
+  width: 40%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+body main section #contenedor-horarios table th,
+body main section #contenedor-horarios table td {
+  border: 0px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+body main section #contenedor-horarios table th {
+  background-color: #d62417;
+}
+body main section #contenedor-horarios #titulo-horarios {
+  font-family: "Ubuntu", sans-serif;
+  width: 25%;
+  text-align: right;
+}
+body main section #contenedor-horarios #horas {
+  font-style: italic;
+  width: 37.5%;
+  text-align: left;
+  font-family: "Ubuntu", sans-serif;
+}
+body main section #contenedor-horarios #dias {
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  text-align: left;
+}
+body footer p {
+  color: rgb(112, 112, 112);
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

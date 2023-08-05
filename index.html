@@ -12,14 +12,17 @@
       content="SERVICIOS, SAN NICOLAS DE LOS ARROYOS, PROFESIONALES, ARGENTINA, PROYECTO, EXPERTOS, BUSCAR"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apligood servicios</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>
+      Encontrador - Te facilitamos la busqueda de profesionales en tu ciudad
+    </title>
   </head>
   <body>
     <header>
-      <p>Apligood servicios</p>
       <nav>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Servicios</a></li>
+        <li><a href="#" class="logo">ENCONTRADOR</a></li>
+        <li><a href="./pages/servicios.html">Servicios</a></li>
         <li>
           <a href="./pages/horarios.html" target="_blank"
             >Horarios de atención</a
@@ -28,23 +31,34 @@
         <li><a href="./pages/contacto.html">Contacto</a></li>
       </nav>
     </header>
+
     <main>
       <section>
-        <h1>Encontrá los expertos de tu ciudad!</h1>
-        <h2>
-          En nuestro sitio cuenta con expertos en todos los servicios que puedas
-          necesitar, con los mejores precios y de la manera mas simple las 24
-          horas!
-        </h2>
+        <div>
+          <h1 id="h1-index">Encontrá los profesionales de tu ciudad!</h1>
+          <h2 id="h2-index">
+            Contamos con expertos en todos los servicios que
+            necesitas, los mejores presupuestos de la manera más simple,
+            las 24 horas!
+          </h2>
 
-        <h3>¡Encuentra al profesional que buscas hoy mismo!</h3>
-      </section>
-      <section>
-        <input type="text" placeholder="Busqueda de profesionales" />
+          <h3 id="h3-index">¡Encuentrá al profesional que buscas hoy mismo!</h3>
+        </div>
+        <div id="contenedor-index">
+          <input
+            type="text"
+            placeholder="Búsqueda de profesionales"
+            autofocus
+          />
+        </div>
+        <div id="contenedor-boton-index">
+          <button aria-label="Crear tarea">Crear tarea</button>
+          <button aria-label="Profesionales">Profesionales</button>
+        </div>
       </section>
     </main>
-    <footer>
-      <p>Realizado por Facu Cabaña Mosto 2023</p>
-    </footer>
   </body>
+  <footer>
+    <p>Realizado por Facu Cabaña Mosto 2023</p>
+  </footer>
 </html>
