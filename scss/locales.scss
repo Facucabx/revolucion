@@ -1,0 +1,112 @@
+main {
+  flex: 1;
+  margin-bottom: 70px;
+  #contenedorLocales {
+    // NAVBAR DE MENU LOCALES
+    .cardLocales {
+      background-color: rgba(134, 115, 115, 0.329);
+      padding: 1rem;
+      border-radius: 1rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto; /* Centra horizontalmente */
+      width: 50%; /* Ajusta el ancho según tus preferencias */
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background-color: rgba(17, 25, 40, 0.75);
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+
+      h1 {
+        color: white;
+      }
+      .boxFiltro {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 18px;
+        background-color: rgb(33, 85, 78);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+
+        #localType {
+          width: 180px;
+          height: 30px;
+          font-size: 1rem;
+          margin: 5px;
+        }
+        #localSelect {
+          width: 180px;
+          font-size: 1rem;
+          margin: 5px;
+          height: 30px;
+        }
+      }
+      .cardLocalesInfo {
+        background-color: rgba(119, 119, 119, 0.479);
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        #nombreLocalInfo {
+          color: rgb(180, 214, 230);
+          font-size: 1.5rem;
+        }
+      }
+      #formularioReserva {
+        padding: 1rem;
+        input {
+          font-size: 1rem;
+          padding: 0.7rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas */
+  main {
+    flex: 1;
+    margin-bottom: 70px;
+    #contenedorLocales {
+      // NAVBAR DE MENU LOCALES
+      .cardLocales {
+        background-color: rgba(134, 115, 115, 0.329);
+        padding: 1rem;
+        border-radius: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto; /* Centra horizontalmente */
+        width: 95%; /* Ajusta el ancho según tus preferencias */
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(17, 25, 40, 0.75);
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        .boxFiltro {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin: 1rem;
+          border-radius: 18px;
+          background-color: rgb(33, 85, 78);
+          border: 1px solid rgba(255, 255, 255, 0.125);
+
+          #localType {
+            width: 100%;
+            font-size: 1rem;
+          }
+          #localSelect {
+            width: 100%;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

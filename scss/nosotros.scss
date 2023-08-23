@@ -1,0 +1,67 @@
+#contenedorNosotros {
+  margin: 0 auto; /* Centra horizontalmente */
+  width: 50%; /* Ajusta el ancho según tus preferencias */
+  padding: 1rem;
+  text-align: center;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  
+  h1 {
+    color: rgba(255, 255, 255, 0.89);
+    margin-bottom: 1rem;
+  }
+  .grid-contenedor {
+    height: 600px;
+    display: grid;
+    grid-template-areas:
+      "cabecera cabecera"
+      "menu menu"
+      "contenido contenido"
+      "lateral lateral"
+      "footer footer";
+
+    .caja {
+      border: 4px solid black;
+      background-color: rgb(201, 200, 198);
+      text-align: center;
+      padding: 20px;
+    }
+    .c1 {
+      grid-area: cabecera;
+      background-color: rgb(36, 36, 134);
+      color: rgb(209, 209, 207);
+    }
+    .c2 {
+      grid-area: menu;
+    }
+    .c3 {
+      grid-area: contenido;
+      background-color: rgb(40, 110, 46);
+    }
+    .c4 {
+      grid-area: lateral;
+      background-color: rgb(163, 56, 56);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas */
+  #contenedorNosotros {
+    background-color: rgba(134, 115, 115, 0.329);
+    margin: 0 auto;
+    width: 95%;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    
+  }
+}

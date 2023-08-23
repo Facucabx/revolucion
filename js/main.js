@@ -65,19 +65,23 @@ function mostrarLocales() {
     const localType = document.getElementById("localType").value;
     const localSelect = document.getElementById("localSelect");
     
-    localSelect.innerHTML = "";
+    localSelect.innerHTML = '<option value="" disabled selected>Elegir local</option>'; // Limpiar opciones
     
     for (const localKey in locales) {
-        if (locales[localKey].tipo === localType) {
-            const option = document.createElement("option");
-            option.value = localKey;
-            option.textContent = locales[localKey].nombre;
-            localSelect.appendChild(option);
-        }
+      if (locales[localKey].tipo === localType) {
+        const option = document.createElement("option");
+        option.value = localKey;
+        option.textContent = locales[localKey].nombre;
+        localSelect.appendChild(option);
+      }
     }
     
-    // Mostrar los datos del local seleccionado
-    mostrarDatosLocal();
+  // Ocultar datos del local seleccionado
+  document.getElementById("nombreLocalInfo").textContent = "";
+  document.getElementById("horarioLocalInfo").textContent = "";
+  document.getElementById("ubicacionLocalInfo").textContent = "";
+  document.getElementById("formularioReserva").style.display = "none";
+  document.getElementById("mensajeReserva").style.display = "none";
 }
 
 function mostrarDatosLocal() {
@@ -104,8 +108,22 @@ function realizarReserva() {
     const localKey = document.getElementById("localSelect").value;
     const local = locales[localKey];
     
-    // Implementa aquí la lógica de reserva
-    
-    document.getElementById("formularioReserva").style.display = "none";
-    document.getElementById("mensajeReserva").style.display = "block";
+  // Verificar campos completos
+  if (nombre === "" || fecha === "" || hora === "" || localKey === "") {
+    document.getElementById("avisoCamposIncompletos").style.display = "block";
+    return; // Detener la función si los campos no están completos
+  } else {
+    document.getElementById("avisoCamposIncompletos").style.display = "none";
+  }
+  
+  // Implementa aquí la lógica de reserva
+  
+  document.getElementById("formularioReserva").style.display = "none";
+  document.getElementById("mensajeReserva").style.display = "block";
+}
+
+
+function toggleMenu() {
+    const nav = document.querySelector('.nav');
+    nav.classList.toggle('active');
 }
