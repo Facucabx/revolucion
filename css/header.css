@@ -16,6 +16,7 @@ header .navbar a {
   color: #c7c7c7;
   padding-left: 20px;
   padding-right: 20px;
+  text-decoration: none;
 }
 header .navbar a:hover {
   color: #dea1f7;

@@ -1,68 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-    <!-- METAS -->
-    <meta charset="UTF-8" />
-    <!-- AUTOR  -->
-    <meta name="author" content="Facundo Ezequiel Cabaña Mosto" />
-    <!-- description  -->
-    <meta name="description"
-      content="Reservame esta! te permite reservar fácilmente en tu ciudad. Descubre y reserva locales en un solo lugar. Encuentra restaurantes acogedores, bares animados, canchas de
+<!-- METAS -->
+<meta charset="UTF-8" />
+<!-- AUTOR  -->
+<meta name="author" content="Facundo Ezequiel Cabaña Mosto" />
+<!-- description  -->
+<meta name="description" content="Reservame esta! te permite reservar fácilmente en tu ciudad. Descubre y reserva locales en un solo lugar. Encuentra restaurantes acogedores, bares animados, canchas de
       fútbol, pádel y más. " />
-    <meta name="keywords"
-      content="RESERVAR, SAN NICOLAS DE LOS ARROYOS, LOCALES, CHANCHAS DE FUTBOL, CANCHAS DE PADEL, ESTACIONAMIENTOS, BAR" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- FAVICON  -->
-    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <!-- TITULO  -->
-    <title>
-      Contacto | Reservame esta! - Te facilitamos las reservas en tu ciudad
-    </title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul class="navbar">
-          <li><a href="../index.html" id="logo">Reservame esta!</a></li>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="./locales.html">Locales</a></li>
-          <li><a href="./nosotros.html">Nosotros</a></li>
-          <li><a href="./horarios.html" target="_blank">Horarios</a></li>
-          <li><a href="./contacto.html" class="navActivo">Contacto</a></li>
-          <div id="contenedor-index">
-            <input type="text" placeholder="Busca lo que quieras reservar" autofocus />
-          </div>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <div>
-          <h1>Formulario de Contacto</h1>
-          <form action="#" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required /><br />
+<meta name="keywords"
+  content="RESERVAR, SAN NICOLAS DE LOS ARROYOS, LOCALES, CHANCHAS DE FUTBOL, CANCHAS DE PADEL, ESTACIONAMIENTOS, BAR" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- FAVICON  -->
+<link rel="icon" href="../img/favicon.png" type="image/x-icon">
+<!-- BOOTSTRAP  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<!-- CSS -->
+<link rel="stylesheet" href="../css/style.css" />
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required /><br />
+<!-- TITULO  -->
+<title>
+  Contacto | Reservame esta! - Te facilitamos las reservas en tu ciudad
+</title>
+</head>
 
-            <label for="asunto">Asunto:</label>
-            <input type="text" id="asunto" name="asunto" required /><br />
-
-            <label for="mensaje">Mensaje:</label><br />
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea
-            ><br />
-
-            <input type="submit" value="Enviar" />
-          </form>
+<body>
+  <header id="minavbar">
+    <nav>
+      <ul class="navbar">
+        <li><a href="../index.html" id="logo">Reservame esta!</a></li>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./locales.html">Locales</a></li>
+        <li><a href="./nosotros.html">Nosotros</a></li>
+        <li><a href="./horarios.html" target="_blank">Horarios</a></li>
+        <li><a href="./contacto.html" class="navActivo">Contacto</a></li>
+        <div id="contenedor-index">
+          <input type="text" placeholder="Busca lo que quieras reservar" autofocus />
         </div>
-      </section>
-    </main>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="contenedorContacto" class="formulario-contacto">
+      <h1>Formulario de Contacto</h1>
+      <div class="cardContacto">
+        <form action="#" method="post" class="form">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre y Apellido</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre y apellido">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="BotonEnviar">
+            <button type="button" class="btn btn-success">Enviar</button>
+
+          </div>
+
+        </form>
+      </div>
+    </section>
+  </main>
   <!-- FOOTER  -->
   <footer id="footer">
     <div class="redFooter">
@@ -73,5 +80,9 @@
     </div>
     <p>Realizado por Facu Cabaña Mosto 2023</p>
   </footer>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

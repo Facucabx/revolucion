@@ -1,0 +1,51 @@
+#minavbar{
+    .navbar{
+        margin-top: 15px;
+    }
+}
+#contenedorContacto {
+  background-color: rgba(134, 115, 115, 0.329);
+  padding: 1rem;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto; /* Centra horizontalmente */
+  width: 50%; /* Ajusta el ancho según tus preferencias */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  h1 {
+    color: white;
+  }
+
+  .cardContacto {
+    text-align: left;
+    .BotonEnviar{
+        display: flex;
+        justify-content: center;
+    }
+  }
+  label {
+    color: white;
+  }
+}
+.formulario-contacto {
+    /* Estilos específicos para el formulario */
+    background-color: #f2f2f2;
+    padding: 20px;
+    form {
+        /* Estilos para el formulario en sí */
+        margin: 0 auto;
+        max-width: 500px;
+      }
+  }
+  .form-bootstrap label {
+    font-weight: bold; /* Ejemplo de anular un estilo de Bootstrap */
+  }
+  /* Estilos personalizados para el formulario */
+.form-custom label {
+    font-weight: normal; /* Ejemplo de estilo personalizado */
+  }
