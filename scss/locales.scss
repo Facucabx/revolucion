@@ -28,7 +28,7 @@ main {
         padding: 1rem;
         margin: 1rem;
         border-radius: 18px;
-        background-color: rgb(33, 85, 78);
+        background-color: rgb(61, 75, 73);
         border: 1px solid rgba(255, 255, 255, 0.125);
 
         #localType {
@@ -64,6 +64,28 @@ main {
           padding: 0.7rem;
         }
       }
+    }
+  }
+  #comprobanteReserva {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: left;
+    h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: #555;
+      margin: 5px 0;
+      padding-left: 1rem;
+    }
+    strong {
+      font-weight: bold;
     }
   }
 }
