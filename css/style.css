@@ -171,7 +171,16 @@ main #contenedorLocales .cardLocales .boxFiltro #localSelect {
   margin: 5px;
   height: 30px;
 }
-main #contenedorLocales .cardLocales .cardLocalesInfo {
+main #contenedorLocales .cardLocales #cajaLocal {
+  display: flex;
+  align-items: center;
+}
+main #contenedorLocales .cardLocales #cajaLocal #imagenLocal {
+  max-width: 250px; /* Ajusta el tamaño de la imagen según sea necesario */
+  margin: 40px; /* Espacio entre la imagen y la información */
+  border-radius: 1rem;
+}
+main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo {
   background-color: rgba(119, 119, 119, 0.479);
   border-radius: 1rem;
   display: flex;
@@ -180,14 +189,14 @@ main #contenedorLocales .cardLocales .cardLocalesInfo {
   align-items: center;
   padding: 1rem;
 }
-main #contenedorLocales .cardLocales .cardLocalesInfo #nombreLocalInfo {
+main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #nombreLocalInfo {
   color: rgb(180, 214, 230);
   font-size: 1.5rem;
 }
-main #contenedorLocales .cardLocales #formularioReserva {
+main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #formularioReserva {
   padding: 1rem;
 }
-main #contenedorLocales .cardLocales #formularioReserva input {
+main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #formularioReserva input {
   font-size: 1rem;
   padding: 0.7rem;
 }

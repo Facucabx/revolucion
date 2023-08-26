@@ -3,7 +3,9 @@ const locales = {
         nombre: "Restaurante Bartolomé",
         horario: "08:00 - 23:59",
         ubicacion: "Calle Mitre 90",
-        tipo: "restaurante"
+        tipo: "restaurante",
+        imagen: "../img/locales/bartolome.png"
+
     },
     bar: {
         nombre: "Cervecia",
@@ -27,7 +29,7 @@ const locales = {
         nombre: "EstacionaSeguro",
         horario: "24/7",
         ubicacion: "Calle Mitre 575",
-        tipo: "estacionamiento"
+        tipo: "estacionamiento",
     },
     restaurante2: {
         nombre: "Restaurante El Cafe",
@@ -93,6 +95,12 @@ function mostrarDatosLocal() {
     document.getElementById("nombreLocalInfo").textContent = `Nombre: ${local.nombre}`;
     document.getElementById("horarioLocalInfo").textContent = `Horario: ${local.horario}`;
     document.getElementById("ubicacionLocalInfo").textContent = `Ubicación: ${local.ubicacion}`;
+
+    // Agrega la imagen del local
+    const imagenLocal = document.getElementById("imagenLocal");
+    imagenLocal.src = local.imagen;
+    imagenLocal.alt = `Imagen de ${local.nombre}`;
+    imagenLocal.style.display = "block"; // Muestra la imagen
 }
 
 function mostrarFormularioReserva() {

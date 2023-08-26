@@ -52,60 +52,66 @@
                     <button onclick="mostrarFormularioReserva()">Reservar</button>
                 </div>
 
-                <div class="cardLocalesInfo">
-                    <div>
-                        <p id="nombreLocalInfo"></p>
-                        <p id="ubicacionLocalInfo"></p>
-                        <p id="horarioLocalInfo"></p>
-                    </div>
 
-                    <div id="formularioReserva" style="display: none;">
-                        <h2>Completa tus detalles de reserva:</h2>
-                        <input type="text" id="nombre" placeholder="Nombre">
-                        <input type="date" id="fecha" placeholder="Fecha">
-                        <input type="time" id="hora" placeholder="Hora">
-
-                        <!-- Campo de cantidad de personas -->
-                        <div id="cantidadPersonas" style="display: none;">
-                          <input type="number" id="cantidadPersonasInput" placeholder="Cantidad de Personas" min="1" oninput="validarCantidadPersonas()">
-                      </div>
-
-                        <!-- Campo de tipo de cancha -->
-                        <div id="tipoCancha" style="display: none;">
-                            <label for="canchaGrande">Cancha Grande</label>
-                            <input type="radio" id="canchaGrande" name="tipoCancha" value="Grande">
-                            <label for="canchaChica">Cancha Chica</label>
-                            <input type="radio" id="canchaChica" name="tipoCancha" value="Chica">
-                        </div>
-
+                <div id="cajaLocal">
+                    <img id="imagenLocal" src="" alt="">
+                    <div class="cardLocalesInfo">
+                        
                         <div>
-                            <button onclick="realizarReserva()">Confirmar Reserva</button>
+                            <p id="nombreLocalInfo"></p>
+                            <p id="ubicacionLocalInfo"></p>
+                            <p id="horarioLocalInfo"></p>
                         </div>
-                    </div>
-
-                    <div id="avisoSeleccionRubroLocal" style="display: none; color: red;">
-                        Por favor, selecciona un rubro y un local antes de reservar.
-                    </div>
-
-                    <div id="avisoCamposIncompletos" style="display: none; color: red;">
-                        Por favor, completa todos los campos antes de confirmar la reserva.
-                    </div>
-
-                    <div id="comprobanteReserva" style="display: none;">
-                        <h2>¡Reserva realizada con éxito!</h2>
-                        <p>Gracias por elegir nuestro servicio de reservas.</p>
-                        <p>Detalle de la reserva:</p>
-                        <p>Nombre: <span id="nombreComprobante"></span></p>
-                        <p>Fecha: <span id="fechaComprobante"></span></p>
-                        <p>Hora: <span id="horaComprobante"></span></p>
-                        <p>Local: <span id="localComprobante"></span></p>
-                        <p>Tipo: <span id="tipoComprobante"></span></p>
-                        <!-- Campo de cantidad de personas en el comprobante -->
-                        <p id="cantidadPersonasComprobante"></p>
-                        <!-- Campo de tipo de cancha en el comprobante -->
-                        <p id="tipoCanchaComprobante"></p>
+    
+                        <div id="formularioReserva" style="display: none;">
+                            <h2>Completa tus detalles de reserva:</h2>
+                            <input type="text" id="nombre" placeholder="Nombre">
+                            <input type="date" id="fecha" placeholder="Fecha">
+                            <input type="time" id="hora" placeholder="Hora">
+    
+                            <!-- Campo de cantidad de personas -->
+                            <div id="cantidadPersonas" style="display: none;">
+                              <input type="number" id="cantidadPersonasInput" placeholder="Cantidad de Personas" min="1" oninput="validarCantidadPersonas()">
+                          </div>
+    
+                            <!-- Campo de tipo de cancha -->
+                            <div id="tipoCancha" style="display: none;">
+                                <label for="canchaGrande">Cancha Grande</label>
+                                <input type="radio" id="canchaGrande" name="tipoCancha" value="Grande">
+                                <label for="canchaChica">Cancha Chica</label>
+                                <input type="radio" id="canchaChica" name="tipoCancha" value="Chica">
+                            </div>
+    
+                            <div>
+                                <button onclick="realizarReserva()">Confirmar Reserva</button>
+                            </div>
+                        </div>
+    
+                        <div id="avisoSeleccionRubroLocal" style="display: none; color: red;">
+                            Por favor, selecciona un rubro y un local antes de reservar.
+                        </div>
+    
+                        <div id="avisoCamposIncompletos" style="display: none; color: red;">
+                            Por favor, completa todos los campos antes de confirmar la reserva.
+                        </div>
+    
+                        <div id="comprobanteReserva" style="display: none;">
+                            <h2>¡Reserva realizada con éxito!</h2>
+                            <p>Gracias por elegir nuestro servicio de reservas.</p>
+                            <p>Detalle de la reserva:</p>
+                            <p>Nombre: <span id="nombreComprobante"></span></p>
+                            <p>Fecha: <span id="fechaComprobante"></span></p>
+                            <p>Hora: <span id="horaComprobante"></span></p>
+                            <p>Local: <span id="localComprobante"></span></p>
+                            <p>Tipo: <span id="tipoComprobante"></span></p>
+                            <!-- Campo de cantidad de personas en el comprobante -->
+                            <p id="cantidadPersonasComprobante"></p>
+                            <!-- Campo de tipo de cancha en el comprobante -->
+                            <p id="tipoCanchaComprobante"></p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
