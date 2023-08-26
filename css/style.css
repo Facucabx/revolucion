@@ -153,6 +153,7 @@ main #contenedorLocales .cardLocales .boxFiltro {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   padding: 1rem;
   margin: 1rem;
   border-radius: 18px;
@@ -160,24 +161,38 @@ main #contenedorLocales .cardLocales .boxFiltro {
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 main #contenedorLocales .cardLocales .boxFiltro #localType {
-  width: 180px;
-  height: 30px;
+  width: 250px;
+  height: 40px;
   font-size: 1rem;
   margin: 5px;
 }
 main #contenedorLocales .cardLocales .boxFiltro #localSelect {
-  width: 180px;
+  width: 250px;
   font-size: 1rem;
   margin: 5px;
-  height: 30px;
+  height: 40px;
+}
+main #contenedorLocales .cardLocales .boxFiltro .botonReservar {
+  width: 7rem;
+  height: 40px;
+  background-color: rgb(21, 129, 66);
+  border-style: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+main #contenedorLocales .cardLocales .boxFiltro .botonReservar:hover {
+  background-color: rgb(18, 104, 78);
+  color: rgb(199, 235, 159);
+  transition: 0.5s;
 }
 main #contenedorLocales .cardLocales #cajaLocal {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 main #contenedorLocales .cardLocales #cajaLocal #imagenLocal {
-  max-width: 250px; /* Ajusta el tamaño de la imagen según sea necesario */
-  margin: 40px; /* Espacio entre la imagen y la información */
+  margin: 1rem; /* Espacio entre la imagen y la información */
   border-radius: 1rem;
 }
 main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo {
@@ -188,10 +203,13 @@ main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  text-align: left;
+  color: white;
 }
 main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #nombreLocalInfo {
-  color: rgb(180, 214, 230);
+  color: rgb(49, 177, 236);
   font-size: 1.5rem;
+  text-align: left;
 }
 main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #formularioReserva {
   padding: 1rem;

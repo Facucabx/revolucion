@@ -25,6 +25,7 @@ main {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         padding: 1rem;
         margin: 1rem;
         border-radius: 18px;
@@ -32,26 +33,40 @@ main {
         border: 1px solid rgba(255, 255, 255, 0.125);
 
         #localType {
-          width: 180px;
-          height: 30px;
+          width: 250px;
+          height: 40px;
           font-size: 1rem;
           margin: 5px;
         }
         #localSelect {
-          width: 180px;
+          width: 250px;
           font-size: 1rem;
           margin: 5px;
-          height: 30px;
+          height: 40px;
+        }
+        .botonReservar {
+          width: 7rem;
+          height: 40px;
+          background-color: rgb(21, 129, 66);
+          border-style: none;
+          color: white;
+          font-size: 1.1rem;
+          cursor: pointer;
+        }
+        .botonReservar:hover {
+          background-color: rgb(18, 104, 78);
+          color: rgb(199, 235, 159);
+          transition: 0.5s;
         }
       }
       #cajaLocal {
         display: flex;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
         #imagenLocal {
-          max-width: 250px; /* Ajusta el tamaño de la imagen según sea necesario */
-          margin: 40px; /* Espacio entre la imagen y la información */
+          margin: 1rem; /* Espacio entre la imagen y la información */
           border-radius: 1rem;
-      }
+        }
         .cardLocalesInfo {
           background-color: rgba(119, 119, 119, 0.479);
           border-radius: 1rem;
@@ -60,12 +75,16 @@ main {
           flex-direction: column;
           align-items: center;
           padding: 1rem;
+          text-align: left;
+          color: white;
+
           #nombreLocalInfo {
-            color: rgb(180, 214, 230);
+            color: rgb(49, 177, 236);
             font-size: 1.5rem;
+            text-align: left;
           }
           #formularioReserva {
-            padding: 1rem;
+            padding: 1rem;          
             input {
               font-size: 1rem;
               padding: 0.7rem;

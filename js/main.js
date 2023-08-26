@@ -5,13 +5,13 @@ const locales = {
         ubicacion: "Calle Mitre 90",
         tipo: "restaurante",
         imagen: "../img/locales/bartolome.png"
-
     },
     bar: {
-        nombre: "Cervecia",
-        horario: "19:00 - 02:00",
+        nombre: "Cervesia",
+        horario: "19:00 - 23:59",
         ubicacion: "Calle Mitre 148",
-        tipo: "bar"
+        tipo: "bar",
+        imagen: "../img/locales/cervesia.png"
     },
     canchaFutbol: {
         nombre: "Cancha Fútbol El Camp Nou",
@@ -33,15 +33,17 @@ const locales = {
     },
     restaurante2: {
         nombre: "Restaurante El Cafe",
-        horario: "08:00 - 00:00",
+        horario: "08:00 - 23:59",
         ubicacion: "Calle Mitre 100",
-        tipo: "restaurante"
+        tipo: "restaurante",
+        imagen: "../img/locales/elcafe.png"
     },
     bar2: {
         nombre: "Bar Villa Rocca",
         horario: "19:00 - 01:00",
         ubicacion: "Pellegrini 157",
-        tipo: "bar"
+        tipo: "bar",
+        imagen: "../img/locales/villarocca.png"
     },
     canchaFutbol2: {
         nombre: "Fútbol más",
@@ -92,7 +94,7 @@ function mostrarDatosLocal() {
     const localKey = document.getElementById("localSelect").value;
     const local = locales[localKey];
 
-    document.getElementById("nombreLocalInfo").textContent = `Nombre: ${local.nombre}`;
+    document.getElementById("nombreLocalInfo").textContent = ` ${local.nombre}`;
     document.getElementById("horarioLocalInfo").textContent = `Horario: ${local.horario}`;
     document.getElementById("ubicacionLocalInfo").textContent = `Ubicación: ${local.ubicacion}`;
 
@@ -145,7 +147,7 @@ function realizarReserva() {
 
     // Verificar que la fecha seleccionada sea posterior a la fecha actual
     if (fechaSeleccionada < fechaActual) {
-        alert("La fecha seleccionada debe ser posterior a la fecha actual.");
+        alert("La fecha seleccionada ya pasó. Por favor, seleccione una de hoy en adelante");
         return;
     }
 
@@ -160,7 +162,7 @@ function realizarReserva() {
         (horaSeleccionada < horaApertura || (horaSeleccionada === horaApertura && minutosSeleccionados < minutosApertura)) ||
         (horaSeleccionada > horaCierre || (horaSeleccionada === horaCierre && minutosSeleccionados > minutosCierre))
     ) {
-        alert("La hora seleccionada está fuera del horario de funcionamiento del comercio.");
+        alert("La hora seleccionada está fuera del horario de atención al cliente. Por favor, seleccione una dentro del horario de atención");
         return;
     }
 
