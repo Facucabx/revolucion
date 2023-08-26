@@ -15,21 +15,24 @@ const locales = {
     },
     canchaFutbol: {
         nombre: "Cancha Fútbol El Camp Nou",
-        horario: "09:00 - 00:00",
+        horario: "09:00 - 23:59",
         ubicacion: "Juan B. Justo 480",
-        tipo: "canchaFutbol"
+        tipo: "canchaFutbol",
+        imagen: "../img/locales/camp.png"
     },
     canchaPadel: {
         nombre: "Pádel El Galpón",
-        horario: "10:00 - 00:00",
+        horario: "10:00 - 23:59",
         ubicacion: "Calle Mitre 599",
-        tipo: "canchaPadel"
+        tipo: "canchaPadel",
+        imagen: "../img/locales/elgalpon.png"
     },
     estacionamiento: {
         nombre: "EstacionaSeguro",
         horario: "24/7",
         ubicacion: "Calle Mitre 575",
         tipo: "estacionamiento",
+        imagen: "../img/locales/estacionamiento.png"
     },
     restaurante2: {
         nombre: "Restaurante El Cafe",
@@ -46,22 +49,25 @@ const locales = {
         imagen: "../img/locales/villarocca.png"
     },
     canchaFutbol2: {
-        nombre: "Fútbol más",
-        horario: "08:00 - 00:00",
+        nombre: "Fútbol Contreras",
+        horario: "08:00 - 23:59",
         ubicacion: "Belgrano 523",
-        tipo: "canchaFutbol"
+        tipo: "canchaFutbol",
+        imagen: "../img/locales/camp.png"
     },
     canchaPadel2: {
-        nombre: "Pádel Deluxe",
-        horario: "09:00 - 22:00",
+        nombre: "Open Pádel",
+        horario: "09:00 - 23:59",
         ubicacion: "Calle Deportiva 234",
-        tipo: "canchaPadel"
+        tipo: "canchaPadel",
+        imagen: "../img/locales/open.png"
     },
     estacionamiento2: {
         nombre: "ParkEasy",
-        horario: "24/7",
+        horario: "09:00 - 23:59",
         ubicacion: "Calle EstacionaFácil 202",
-        tipo: "estacionamiento"
+        tipo: "estacionamiento",
+        imagen: "../img/locales/estacionamiento.png"
     }
 };
 
@@ -88,6 +94,20 @@ function mostrarLocales() {
     document.getElementById("mensajeReserva").style.display = "none";
     document.getElementById("cantidadPersonas").style.display = "none"; // Ocultar campo de cantidad de personas
     document.getElementById("tipoCancha").style.display = "none"; // Ocultar campo de tipo de cancha
+
+    // Ocultar la imagen del local
+    const imagenLocal = document.getElementById("imagenLocal");
+    imagenLocal.src = "";
+    imagenLocal.alt = "";
+    imagenLocal.style.display = "none"; // Oculta la imagen
+}
+
+window.onload = function() {
+    // Configurar la imagen vacía
+    const imagenLocal = document.getElementById("imagenLocal");
+    imagenLocal.src = "";
+    imagenLocal.alt = "";
+    imagenLocal.style.display = "none"; // Oculta la imagen
 }
 
 function mostrarDatosLocal() {
@@ -102,8 +122,12 @@ function mostrarDatosLocal() {
     const imagenLocal = document.getElementById("imagenLocal");
     imagenLocal.src = local.imagen;
     imagenLocal.alt = `Imagen de ${local.nombre}`;
-    imagenLocal.style.display = "block"; // Muestra la imagen
+    imagenLocal.style.display = ""; // Muestra la imagen
+
+    // Muestra la cajaLocal
+    document.getElementById("cajaLocal").style.display = "";
 }
+
 
 function mostrarFormularioReserva() {
     const localKey = document.getElementById("localSelect").value;
