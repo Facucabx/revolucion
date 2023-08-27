@@ -37,15 +37,17 @@ main #contenedorLocales .cardLocales .boxFiltro #localType {
   height: 40px;
   font-size: 1rem;
   margin: 5px;
+  padding-left: 0.5rem;
 }
 main #contenedorLocales .cardLocales .boxFiltro #localSelect {
   width: 250px;
   font-size: 1rem;
   margin: 5px;
   height: 40px;
+  padding-left: 0.5rem;
 }
 main #contenedorLocales .cardLocales .boxFiltro .botonReservar {
-  width: 7rem;
+  width: 4rem;
   height: 40px;
   background-color: rgb(21, 129, 66);
   border-style: none;
@@ -86,9 +88,25 @@ main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #nombreLocalInf
 main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #formularioReserva {
   padding: 1rem;
 }
-main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #formularioReserva input {
-  font-size: 1rem;
-  padding: 0.7rem;
+main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #formularioReserva .localBoton {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #formularioReserva .localBoton .botonConfirmar {
+  width: 10rem;
+  height: 2rem;
+  color: green;
+  cursor: pointer;
+}
+main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #formularioReserva #tipoCancha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+main #contenedorLocales .cardLocales #cajaLocal .cardLocalesInfo #formularioReserva #tipoCancha label {
+  padding: 0.5rem;
 }
 main #comprobanteReserva {
   background-color: #f9f9f9;

@@ -2,17 +2,19 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="Facundo Ezequiel Cabaña Mosto" />
-    <meta name="description" content="Reservame esta! te permite reservar fácilmente en tu ciudad. Descubre y reserva locales en un solo lugar. Encuentra restaurantes acogedores, bares animados, canchas de fútbol, pádel y más. " />
-    <meta name="keywords" content="RESERVAR, SAN NICOLAS DE LOS ARROYOS, LOCALES, CHANCHAS DE FUTBOL, CANCHAS DE PADEL, ESTACIONAMIENTOS, BAR" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Facundo Ezequiel Cabaña Mosto">
+    <meta name="description"
+        content="Reservame esta! te permite reservar fácilmente en tu ciudad. Descubre y reserva locales en un solo lugar. Encuentra restaurantes acogedores, bares animados, canchas de fútbol, pádel y más.">
+    <meta name="keywords"
+        content="RESERVAR, SAN NICOLAS DE LOS ARROYOS, LOCALES, CHANCHAS DE FUTBOL, CANCHAS DE PADEL, ESTACIONAMIENTOS, BAR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>
-        Locales | Reservame esta! - Te facilitamos las reservas en tu ciudad
-    </title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Locales | Reservame esta! - Reserva en tu ciudad</title>
 </head>
 
 <body>
@@ -25,9 +27,11 @@
                 <li><a href="./nosotros.html">Nosotros</a></li>
                 <li><a href="./horarios.html" target="_blank">Horarios</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
-                <div id="contenedor-index">
-                    <input type="text" placeholder="Busca lo que quieras reservar" autofocus />
-                </div>
+                <li>
+                    <div id="contenedor-index">
+                        <input type="text" placeholder="Buscar reserva" autofocus />
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -38,7 +42,7 @@
                 <h1>Locales</h1>
                 <div class="boxFiltro">
                     <select id="localType" onchange="mostrarLocales()">
-                        <option value="" disabled selected>Seleccionar rubro</option>
+                        <option value="" disabled selected>Selecciona un rubro</option>
                         <option value="restaurante">Restaurante</option>
                         <option value="bar">Bar</option>
                         <option value="canchaFutbol">Cancha de Fútbol</option>
@@ -46,72 +50,75 @@
                         <option value="estacionamiento">Estacionamiento</option>
                     </select>
                     <select id="localSelect" onchange="mostrarDatosLocal()">
-                        <option value="" disabled selected>Seleccionar local</option>
+                        <option value="" disabled selected>Selecciona un local</option>
                         <!-- Opciones de locales se generarán dinámicamente aquí -->
                     </select>
-                    <button class="botonReservar" onclick="mostrarFormularioReserva()">Reservar</button>
+                    <button class="botonReservar" onclick="mostrarFormularioReserva()"><i
+                            class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> </button>
                 </div>
-
 
                 <div id="cajaLocal" style="display: none;">
                     <img id="imagenLocal" src="" alt="" height="250" width="250">
                     <div class="cardLocalesInfo">
-                        
                         <div>
                             <p id="nombreLocalInfo"></p>
                             <p id="ubicacionLocalInfo"></p>
                             <p id="horarioLocalInfo"></p>
                         </div>
-    
+
                         <div id="formularioReserva" style="display: none;">
-                            <h2>Completa tus detalles de reserva:</h2>
-                            <input type="text" id="nombre" placeholder="Nombre">
-                            <input type="date" id="fecha" placeholder="Fecha">
-                            <input type="time" id="hora" placeholder="Hora">
-    
+                            <h3>Detalles de reserva:</h3>
+                            <div>
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" placeholder="Tu nombre completo">
+                            </div>
+                            <div>
+                                <label for="fecha">Fecha:</label>
+                                <input type="date" id="fecha" placeholder="Selecciona la fecha">
+                            </div>
+                            <div>
+                                <label for="hora">Hora:</label>
+                                <input type="time" id="hora" placeholder="Ingresa la hora">
+                            </div>
+
                             <!-- Campo de cantidad de personas -->
                             <div id="cantidadPersonas" style="display: none;">
-                              <input type="number" id="cantidadPersonasInput" placeholder="Cantidad de Personas" min="1" oninput="validarCantidadPersonas()">
-                          </div>
-    
+                                <label for="cantidadPersonasInput">Cantidad de Personas:</label>
+                                <input type="number" id="cantidadPersonasInput" placeholder="Número de personas" min="1"
+                                    oninput="validarCantidadPersonas()">
+                            </div>
+
                             <!-- Campo de tipo de cancha -->
-                            <div id="tipoCancha" style="display: none;">
+                            <fieldset id="tipoCancha" style="display: none;">
+                                <legend>Tipo de Cancha:</legend>
                                 <label for="canchaGrande">Cancha Grande</label>
                                 <input type="radio" id="canchaGrande" name="tipoCancha" value="Grande">
                                 <label for="canchaChica">Cancha Chica</label>
                                 <input type="radio" id="canchaChica" name="tipoCancha" value="Chica">
-                            </div>
-    
-                            <div>
-                                <button onclick="realizarReserva()">Confirmar Reserva</button>
+                            </fieldset>
+                            
+
+                            <!-- Campo de mensaje -->
+                            <label for="mensaje">Mensaje (opcional):</label>
+                            <textarea id="mensaje"
+                                placeholder="Deja un mensaje opcional para el local. Por ejemplo, requisitos especiales o solicitudes"></textarea>
+
+
+                            <div class="localBoton">
+                                <button class="botonConfirmar" onclick="realizarReserva()">Confirmar Reserva</button>
                             </div>
                         </div>
-    
+
                         <div id="avisoSeleccionRubroLocal" style="display: none; color: red;">
                             Por favor, selecciona un rubro y un local antes de reservar.
                         </div>
-    
+
                         <div id="avisoCamposIncompletos" style="display: none; color: red;">
                             Por favor, completa todos los campos antes de confirmar la reserva.
                         </div>
-    
-                        <div id="comprobanteReserva" style="display: none;">
-                            <h2>¡Reserva realizada con éxito!</h2>
-                            <p>Gracias por elegir nuestro servicio de reservas.</p>
-                            <p>Detalle de la reserva:</p>
-                            <p>Nombre: <span id="nombreComprobante"></span></p>
-                            <p>Fecha: <span id="fechaComprobante"></span></p>
-                            <p>Hora: <span id="horaComprobante"></span></p>
-                            <p>Local: <span id="localComprobante"></span></p>
-                            <p>Tipo: <span id="tipoComprobante"></span></p>
-                            <!-- Campo de cantidad de personas en el comprobante -->
-                            <p id="cantidadPersonasComprobante"></p>
-                            <!-- Campo de tipo de cancha en el comprobante -->
-                            <p id="tipoCanchaComprobante"></p>
-                        </div>
+
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
@@ -124,12 +131,30 @@
                     style="color: #2c60ba;"></i></a>
             <a href="http://whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"
                     style="color: #408e01;"></i></a>
-            <a href="http://fb.com" target="_blank"><i class="fa-brands fa-facebook"
-                    style="color: #002970;"></i></a>
+            <a href="http://fb.com" target="_blank"><i class="fa-brands fa-facebook" style="color: #002970;"></i></a>
         </div>
         <p>Realizado por Facu Cabaña Mosto 2023</p>
     </footer>
+    <!-- Modal -->
+    <div id="comprobanteReserva" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Comprobante de Reserva</h2>
+            <p>Nombre: <span id="nombreComprobante"></span></p>
+            <p>Fecha: <span id="fechaComprobante"></span></p>
+            <p>Hora: <span id="horaComprobante"></span></p>
+            <p>Local: <span id="localComprobante"></span></p>
+            <p>Tipo: <span id="tipoComprobante"></span></p>
+            <p id="tipoCanchaComprobante"></p>
+            <p id="cantidadPersonasComprobante"></p>
+            <p id="mensajeUsuario"></p>
+            <button onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
     <script src="../js/main.js"></script>
+
+
+
 </body>
 
 </html>

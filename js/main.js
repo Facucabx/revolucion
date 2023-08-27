@@ -53,7 +53,7 @@ const locales = {
         horario: "08:00 - 23:59",
         ubicacion: "Belgrano 523",
         tipo: "canchaFutbol",
-        imagen: "../img/locales/camp.png"
+        imagen: "../img/locales/contreras.png"
     },
     canchaPadel2: {
         nombre: "Open Pádel",
@@ -133,8 +133,8 @@ function mostrarFormularioReserva() {
     const localKey = document.getElementById("localSelect").value;
     const local = locales[localKey];
 
-    document.getElementById("formularioReserva").style.display = "block";
-    document.getElementById("nombre").placeholder = `Nombre para ${local.nombre}`;
+    document.getElementById("formularioReserva").style.display = "";
+
 
     // Mostrar campo de cantidad de personas solo si es restaurante o bar
     if (local.tipo === "restaurante" || local.tipo === "bar") {
@@ -145,7 +145,7 @@ function mostrarFormularioReserva() {
 
     // Mostrar campo de tipo de cancha solo si es una cancha de fútbol
     if (local.tipo === "canchaFutbol") {
-        document.getElementById("tipoCancha").style.display = "block";
+        document.getElementById("tipoCancha").style.display = "";
     } else {
         document.getElementById("tipoCancha").style.display = "none";
     }
@@ -219,27 +219,32 @@ function realizarReserva() {
     document.getElementById("localComprobante").textContent = local.nombre;
     document.getElementById("tipoComprobante").textContent = localType;
 
-    // Mostrar o no el "Tipo de Cancha" según el tipo de local
+    // Obtener el mensaje ingresado por el usuario
+    const mensaje = document.getElementById("mensaje").value;
+
+    // Establecer el mensaje en el elemento HTML del modal
+    document.getElementById("mensajeUsuario").textContent = `Mensaje: ${mensaje}`;
+
+    // Mostrar el comprobante
+    document.getElementById("comprobanteReserva").style.display = "block";
+
+    // Mostrar o no el "Tipo de Cancha" según el tipo de local en el comprobante
     if (localType === "canchaFutbol") {
         document.getElementById("tipoCanchaComprobante").textContent = `Tipo de Cancha: ${tipoCancha}`;
     } else {
         document.getElementById("tipoCanchaComprobante").textContent = "";
     }
 
-    // Mostrar o no la cantidad de personas según el tipo de local
+    // Mostrar o no la cantidad de personas según el tipo de local en el comprobante
     if (localType === "restaurante" || localType === "bar") {
         document.getElementById("cantidadPersonasComprobante").textContent = `Cantidad de Personas: ${cantidadPersonas}`;
     } else {
         document.getElementById("cantidadPersonasComprobante").textContent = "";
     }
-
-    // Mostrar el comprobante
-    document.getElementById("comprobanteReserva").style.display = "block";
 }
 
-function toggleMenu() {
-    const nav = document.querySelector('.nav');
-    nav.classList.toggle('active');
+function cerrarModal() {
+    document.getElementById("comprobanteReserva").style.display = "none";
 }
 
 function validarCantidadPersonas() {
@@ -251,4 +256,7 @@ function validarCantidadPersonas() {
     } else {
         cantidadPersonasInput.setCustomValidity(""); // Restablecer la validación personalizada
     }
+}
+function cerrarModal() {
+    document.getElementById("comprobanteReserva").style.display = "none";
 }

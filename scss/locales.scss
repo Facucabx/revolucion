@@ -37,15 +37,17 @@ main {
           height: 40px;
           font-size: 1rem;
           margin: 5px;
+          padding-left: 0.5rem;
         }
         #localSelect {
           width: 250px;
           font-size: 1rem;
           margin: 5px;
           height: 40px;
+          padding-left: 0.5rem;
         }
         .botonReservar {
-          width: 7rem;
+          width: 4rem;
           height: 40px;
           background-color: rgb(21, 129, 66);
           border-style: none;
@@ -84,10 +86,26 @@ main {
             text-align: left;
           }
           #formularioReserva {
-            padding: 1rem;          
-            input {
-              font-size: 1rem;
-              padding: 0.7rem;
+            padding: 1rem;
+            .localBoton {
+              display: flex;
+              justify-content: center;
+              padding: 1rem;
+              .botonConfirmar {
+                width: 10rem;
+                height: 2rem;
+                color: green;
+                cursor: pointer;
+              }
+            }
+            #tipoCancha {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 1rem;
+              label {
+                padding: 0.5rem;
+              }
             }
           }
         }
@@ -95,6 +113,7 @@ main {
     }
   }
   #comprobanteReserva {
+
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     padding: 20px;
