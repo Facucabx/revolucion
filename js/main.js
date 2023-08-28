@@ -102,7 +102,7 @@ function mostrarLocales() {
     imagenLocal.style.display = "none"; // Oculta la imagen
 }
 
-window.onload = function() {
+window.onload = function () {
     // Configurar la imagen vacía
     const imagenLocal = document.getElementById("imagenLocal");
     imagenLocal.src = "";
@@ -126,6 +126,14 @@ function mostrarDatosLocal() {
 
     // Muestra la cajaLocal
     document.getElementById("cajaLocal").style.display = "";
+
+    // Mostrar el enlace "Ver menú" solo si el local seleccionado es Cervesia
+    const verMenuEnlace = document.getElementById("verMenuEnlace");
+    if (localKey === "bar" && local.nombre === "Cervesia") {
+        verMenuEnlace.style.display = "block";
+    } else {
+        verMenuEnlace.style.display = "none";
+    }
 }
 
 
@@ -159,34 +167,31 @@ function realizarReserva() {
     const localType = document.getElementById("localType").value;
     const local = locales[localKey];
 
-    // Obtener la fecha y hora actual
-    const fechaActual = new Date();
-    const horaActual = fechaActual.getHours();
-    const minutosActual = fechaActual.getMinutes();
-
     // Convertir la fecha y hora seleccionadas por el usuario a objetos Date
-    const fechaSeleccionada = new Date(fechaInput);
-    const horaSeleccionada = parseInt(horaInput.split(':')[0], 10);
-    const minutosSeleccionados = parseInt(horaInput.split(':')[1], 10);
+    const fechaSeleccionada = new Date(fechaInput + "T" + horaInput);
+    const fechaActual = new Date();
 
-    // Verificar que la fecha seleccionada sea posterior a la fecha actual
-    if (fechaSeleccionada < fechaActual) {
-        alert("La fecha seleccionada ya pasó. Por favor, seleccione una de hoy en adelante");
-        return;
-    }
-
-    // Verificar que la hora seleccionada esté dentro del horario del comercio
+    // Verificar si la hora seleccionada está dentro del horario de atención del local
     const horarioComercio = local.horario.split(' - ');
     const horaApertura = parseInt(horarioComercio[0].split(':')[0], 10);
     const minutosApertura = parseInt(horarioComercio[0].split(':')[1], 10);
     const horaCierre = parseInt(horarioComercio[1].split(':')[0], 10);
     const minutosCierre = parseInt(horarioComercio[1].split(':')[1], 10);
 
+    const horaSeleccionada = parseInt(horaInput.split(':')[0], 10);
+    const minutosSeleccionados = parseInt(horaInput.split(':')[1], 10);
+
     if (
         (horaSeleccionada < horaApertura || (horaSeleccionada === horaApertura && minutosSeleccionados < minutosApertura)) ||
         (horaSeleccionada > horaCierre || (horaSeleccionada === horaCierre && minutosSeleccionados > minutosCierre))
     ) {
-        alert("La hora seleccionada está fuera del horario de atención al cliente. Por favor, seleccione una dentro del horario de atención");
+        alert("La hora seleccionada está fuera del horario de atención al cliente. Por favor, seleccione una dentro del horario de atención.");
+        return;
+    }
+
+    // Comparar si la fecha seleccionada es menor o igual a la fecha actual
+    if (fechaSeleccionada <= fechaActual) {
+        alert("La fecha y hora seleccionadas ya pasaron o son iguales a la fecha y hora actual. Por favor, seleccione una fecha y hora futura.");
         return;
     }
 

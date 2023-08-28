@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 header {
   display: flex;
   align-items: center;
@@ -157,8 +158,9 @@ main #contenedorLocales .cardLocales .boxFiltro {
   padding: 1rem;
   margin: 1rem;
   border-radius: 18px;
-  background-color: rgb(61, 75, 73);
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  background-color: rgb(16, 28, 43);
+  border: 1px solid rgba(95, 96, 104, 0.137);
+  box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.75);
 }
 main #contenedorLocales .cardLocales .boxFiltro #localType {
   width: 250px;
@@ -166,6 +168,13 @@ main #contenedorLocales .cardLocales .boxFiltro #localType {
   font-size: 1rem;
   margin: 5px;
   padding-left: 0.5rem;
+  background-color: rgba(75, 82, 148, 0.9921568627);
+  color: rgb(223, 220, 236);
+  border-radius: 0.2rem;
+  border-style: none;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.75);
 }
 main #contenedorLocales .cardLocales .boxFiltro #localSelect {
   width: 250px;
@@ -173,6 +182,13 @@ main #contenedorLocales .cardLocales .boxFiltro #localSelect {
   margin: 5px;
   height: 40px;
   padding-left: 0.5rem;
+  background-color: rgba(114, 96, 138, 0.9921568627);
+  color: white;
+  border-radius: 0.2rem;
+  border-style: none;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.75);
 }
 main #contenedorLocales .cardLocales .boxFiltro .botonReservar {
   width: 4rem;
@@ -183,6 +199,7 @@ main #contenedorLocales .cardLocales .boxFiltro .botonReservar {
   color: white;
   font-size: 1.1rem;
   cursor: pointer;
+  box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.75);
 }
 main #contenedorLocales .cardLocales .boxFiltro .botonReservar:hover {
   background-color: rgb(18, 104, 44);
@@ -433,7 +450,7 @@ main #comprobanteReserva strong {
 }
 #contenedorNosotros {
   margin: 0 auto; /* Centra horizontalmente */
-  width: 50%; /* Ajusta el ancho según tus preferencias */
+  width: 70%; /* Ajusta el ancho según tus preferencias */
   padding: 1rem;
   text-align: center;
   backdrop-filter: blur(16px) saturate(180%);
@@ -461,17 +478,31 @@ main #comprobanteReserva strong {
   grid-area: cabecera;
   background-color: rgb(36, 36, 134);
   color: rgb(209, 209, 207);
+  font-family: inter;
 }
 #contenedorNosotros .grid-contenedor .c2 {
   grid-area: menu;
 }
-#contenedorNosotros .grid-contenedor .c3 {
-  grid-area: contenido;
-  background-color: rgb(40, 110, 46);
+#contenedorNosotros .grid-contenedor .c2 #ceo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: inter;
 }
-#contenedorNosotros .grid-contenedor .c4 {
-  grid-area: lateral;
-  background-color: rgb(163, 56, 56);
+#contenedorNosotros .grid-contenedor .c2 #ceo h3 {
+  padding-bottom: 1rem;
+  font-family: inter;
+}
+#contenedorNosotros .grid-contenedor .c2 #ceo p {
+  font-family: inter;
+  font-size: 1rem;
+  text-align: left;
+  width: 90%;
+  padding-left: 2rem;
+}
+#contenedorNosotros .grid-contenedor .c2 #ceo img {
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {

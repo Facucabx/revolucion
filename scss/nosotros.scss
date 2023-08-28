@@ -1,6 +1,6 @@
 #contenedorNosotros {
   margin: 0 auto; /* Centra horizontalmente */
-  width: 50%; /* Ajusta el ancho según tus preferencias */
+  width: 70%; /* Ajusta el ancho según tus preferencias */
   padding: 1rem;
   text-align: center;
   backdrop-filter: blur(16px) saturate(180%);
@@ -8,7 +8,7 @@
   background-color: rgba(17, 25, 40, 0.75);
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.125);
-  
+
   h1 {
     color: rgba(255, 255, 255, 0.89);
     margin-bottom: 1rem;
@@ -33,17 +33,32 @@
       grid-area: cabecera;
       background-color: rgb(36, 36, 134);
       color: rgb(209, 209, 207);
+      font-family: inter;
     }
     .c2 {
       grid-area: menu;
-    }
-    .c3 {
-      grid-area: contenido;
-      background-color: rgb(40, 110, 46);
-    }
-    .c4 {
-      grid-area: lateral;
-      background-color: rgb(163, 56, 56);
+      #ceo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-family: inter;
+
+        h3 {
+          padding-bottom: 1rem;
+          font-family: inter;
+        }
+        p {
+          font-family: inter;
+          font-size: 1rem;
+          text-align: left;
+          width: 90%;
+          padding-left: 2rem;
+        }
+        img {
+          border-radius: 50%;
+        }
+      }
     }
   }
 }
@@ -62,6 +77,5 @@
     background-color: rgba(17, 25, 40, 0.75);
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.125);
-    
   }
 }

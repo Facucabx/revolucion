@@ -29,8 +29,9 @@ main #contenedorLocales .cardLocales .boxFiltro {
   padding: 1rem;
   margin: 1rem;
   border-radius: 18px;
-  background-color: rgb(61, 75, 73);
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  background-color: rgb(16, 28, 43);
+  border: 1px solid rgba(95, 96, 104, 0.137);
+  box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.75);
 }
 main #contenedorLocales .cardLocales .boxFiltro #localType {
   width: 250px;
@@ -38,6 +39,13 @@ main #contenedorLocales .cardLocales .boxFiltro #localType {
   font-size: 1rem;
   margin: 5px;
   padding-left: 0.5rem;
+  background-color: rgba(75, 82, 148, 0.9921568627);
+  color: rgb(223, 220, 236);
+  border-radius: 0.2rem;
+  border-style: none;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.75);
 }
 main #contenedorLocales .cardLocales .boxFiltro #localSelect {
   width: 250px;
@@ -45,6 +53,13 @@ main #contenedorLocales .cardLocales .boxFiltro #localSelect {
   margin: 5px;
   height: 40px;
   padding-left: 0.5rem;
+  background-color: rgba(114, 96, 138, 0.9921568627);
+  color: white;
+  border-radius: 0.2rem;
+  border-style: none;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.75);
 }
 main #contenedorLocales .cardLocales .boxFiltro .botonReservar {
   width: 4rem;
@@ -55,6 +70,7 @@ main #contenedorLocales .cardLocales .boxFiltro .botonReservar {
   color: white;
   font-size: 1.1rem;
   cursor: pointer;
+  box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.75);
 }
 main #contenedorLocales .cardLocales .boxFiltro .botonReservar:hover {
   background-color: rgb(18, 104, 44);
