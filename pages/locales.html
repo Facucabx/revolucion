@@ -62,8 +62,11 @@
                     <div class="cardLocalesInfo">
                         <div>
                             <p id="nombreLocalInfo"></p>
-                            <p id="ubicacionLocalInfo"></p>
-                            <p id="horarioLocalInfo"></p>
+                            <div class="infoLocal">
+                                <p id="ubicacionLocalInfo"></p>
+                                <p id="horarioLocalInfo"></p>
+                            </div>
+
                         </div>
 
                         <div id="formularioReserva" style="display: none;">
@@ -99,14 +102,19 @@
                             
 
                             <!-- Campo de mensaje -->
-                            <label for="mensaje">Mensaje (opcional):</label>
-                            <textarea id="mensaje"
-                                placeholder="Deja un mensaje opcional para el local. Por ejemplo, requisitos especiales o solicitudes"></textarea>
+                            <div>
+                                <div>
+                                    <label for="mensaje">Mensaje (opcional):</label>
+                                </div>
 
-
-                            <div class="localBoton">
-                                <button class="botonConfirmar" onclick="realizarReserva()">Confirmar Reserva</button>
+                                <textarea id="mensaje"
+                                    placeholder="Deja un mensaje opcional para el local. Por ejemplo, requisitos especiales o solicitudes"></textarea>
+    
+                                <div class="localBoton">
+                                    <button class="botonConfirmar" onclick="realizarReserva()">Confirmar Reserva</button>
+                                </div>
                             </div>
+
                         </div>
 
                         <div id="avisoSeleccionRubroLocal" style="display: none; color: red;">
@@ -148,7 +156,9 @@
             <p id="tipoCanchaComprobante"></p>
             <p id="cantidadPersonasComprobante"></p>
             <p id="mensajeUsuario"></p>
-            <button onclick="cerrarModal()">Cerrar</button>
+            <div class="cerrarModal">
+                <button onclick="cerrarModal()">Cerrar</button>
+            </div>
         </div>
     </div>
     <script src="../js/main.js"></script>

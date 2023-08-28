@@ -58,6 +58,10 @@ body {
   animation-name: modalopen;
   animation-duration: 0.4s;
 }
+.cerrarModal{
+  display: flex;
+  justify-content: center;
+}
 /* Agrega una animación de entrada para el modal */
 @keyframes modalopen {
   from {
@@ -82,4 +86,12 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+}
+@media (max-width: 768px) {
+  body{
+    .modal-content {
+      width: 90%;
+    }
+  }
+
 }
