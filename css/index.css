@@ -49,6 +49,40 @@
   transition: 0.3s;
 }
 
+#contenedor-recom {
+  max-width: 900px;
+  height: 20rem;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+#contenedor-recom .tituRecom {
+  color: white;
+  font-size: 2rem;
+  padding-top: 3rem;
+  text-align: center;
+}
+#contenedor-recom .usuariosRecom {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+#contenedor-recom .usuariosRecom .cardRecom {
+  color: white;
+  width: 25rem;
+  background-color: rgba(128, 128, 128, 0.212);
+  border-radius: 1rem;
+  margin: 1rem;
+}
+#contenedor-recom .usuariosRecom .cardRecom .comentRecom {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  padding: 0.9rem;
+}
+#contenedor-recom .usuariosRecom .cardRecom .nombreRecom {
+  text-align: right;
+  margin: 0.8rem;
+}
+
 @media (max-width: 768px) {
   /* Estilos para pantallas más pequeñas */
   #portada-index #contenedor-index {

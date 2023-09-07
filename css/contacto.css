@@ -52,4 +52,10 @@
   font-weight: normal; /* Ejemplo de estilo personalizado */
 }
 
+@media (max-width: 768px) {
+  #contenedorContacto {
+    width: 95%;
+  }
+}
+
 /*# sourceMappingURL=contacto.css.map */
